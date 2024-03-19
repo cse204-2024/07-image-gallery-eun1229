@@ -20,3 +20,18 @@ function close_image() {
   expanded_image_container.className = "hidden-image-container";
   document.getElementsByTagName("html")[0].className = "";
 }
+
+document.getElementById("prev").addEventListener("click", prev_image);
+document.getElementById("next").addEventListener("click", next_image);
+
+function next_image() {
+  current_id = (current_id+1) % 12;
+  let next_image = document.getElementById("img"+current_id)
+  expanded_image.src=next_image.src;
+}
+
+function prev_image() {
+  current_id = ((current_id-1) + 12) % 12;
+  let next_image = document.getElementById("img"+current_id)
+  expanded_image.src=next_image.src;
+}
