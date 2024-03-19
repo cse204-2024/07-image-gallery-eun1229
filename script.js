@@ -1,5 +1,7 @@
 let gallery_images = document.getElementsByClassName("gallery-images");
 let current_id = 0;
+let expanded_image = document.getElementById("expanded-image");
+let expanded_image_container = document.getElementById("expanded-image-container");
 
 for(let i=0; i < gallery_images.length; i++) {
   gallery_images.item(i).addEventListener("click", expand_image);
