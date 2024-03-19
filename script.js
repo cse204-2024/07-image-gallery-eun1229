@@ -13,3 +13,10 @@ function expand_image() {
   document.getElementsByTagName("html")[0].className = "shaded-background";
   console.log(current_id);
 }
+
+document.getElementById("close-button").addEventListener("click", close_image);
+
+function close_image() {
+  expanded_image_container.className = "hidden-image-container";
+  document.getElementsByTagName("html")[0].className = "";
+}
