@@ -14,6 +14,12 @@ img:hover {
   transition: 0.3s;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 /* CLASSES */
 
 .flex-container {
@@ -23,7 +29,53 @@ img:hover {
   justify-content: center;
 }
 
+.shaded-background {
+  background-color: rgba(3, 3, 3, 0.66);
+}
+
 /* END CLASSES */
+
+/* EXPANDED IMAGE VIEW */
+
+.expanded-image-container { /* https://medium.com/front-end-weekly/absolute-centering-in-css-ea3a9d0ad72e */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  /* max-width: 90%; */
+  width: 90%;
+  /* min-width: 300px; */
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+
+.hidden-image-container {
+  display: none;
+}
+
+#expanded-image {
+  height: auto;
+  width: 80%;
+  cursor: auto;
+  opacity: 1;
+}
+
+#close-button {
+  font-size: xx-large;
+  cursor: pointer;
+  position: absolute;
+  color: white;
+}
+
+#next, 
+#prev {
+  font-size: xx-large;
+  color: white;
+}
+
+/* END EXPANDED IMAGE VIEW */
 
 @media (max-width: 375px) {
   img {
